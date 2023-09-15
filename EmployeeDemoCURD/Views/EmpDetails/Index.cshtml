@@ -1,0 +1,61 @@
+﻿@model IEnumerable<EmployeeDemoCURD.EmpDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    #tbl{
+        background-color:darkkhaki
+
+    }
+</style>
+
+<h2>Index</h2>
+
+
+<table class="table" >
+    <tr id="tbl">
+        <th>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpAdress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+       
+    </tr>
+ 
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <hr />
+            @Html.DisplayFor(modelItem => item.EmpName)
+        </td>
+        <td>
+            <hr />
+            @Html.DisplayFor(modelItem => item.EmpAdress)
+        </td>
+        <td>
+            <hr />
+            @Html.DisplayFor(modelItem => item.PhoneNo)
+        </td>
+        <td>
+            <hr />
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+
+            <hr />
+           
+            @Html.ActionLink("Login", "Details", new { id = item.EmpId }) | &nbsp;
+          
+        </td>
+    </tr>
+}
+
+</table>

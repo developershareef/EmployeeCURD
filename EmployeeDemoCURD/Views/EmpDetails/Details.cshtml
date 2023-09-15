@@ -1,0 +1,41 @@
+﻿@model EmployeeDemoCURD.EmpDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+   .lBL{
+       background-color:antiquewhite
+   }
+   .spn{
+       text-align:center
+   }
+</style>
+
+
+
+<div>
+    
+    <h4>EmpDetail</h4>
+    <hr />
+    <div>
+        <label class="lBL">@Html.DisplayNameFor(model => model.EmpName)</label>
+        <span class="spn"> @Html.DisplayFor(model => model.EmpName)</span>
+    </div>
+    <div>
+        <label class="lBL"> @Html.DisplayNameFor(model => model.EmpAdress)</label>
+        <span class="spn">@Html.DisplayFor(model => model.EmpAdress)</span>
+    </div>
+    <div>
+        <label class="lBL"> @Html.DisplayNameFor(model => model.PhoneNo)</label>
+        <span class="spn"> @Html.DisplayFor(model => model.PhoneNo)</span>
+    </div>
+    <div>
+        <label class="lBL"> @Html.DisplayNameFor(model => model.Salary)</label>
+        <span class="spn"> @Html.DisplayFor(model => model.Salary)</span>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmpId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

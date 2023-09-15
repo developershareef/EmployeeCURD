@@ -1,0 +1,30 @@
+﻿@model EmployeeDemoCURD.EmpDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div style="background-color:yellowgreen; text-align:center">
+    <h4>EmpDetail</h4>
+    <hr />
+    <label> @Html.DisplayNameFor(model => model.EmpName)</label>
+    <span> @Html.DisplayFor(model => model.EmpName)</span><br />
+    <label>@Html.DisplayNameFor(model => model.EmpAdress)</label>
+    <span> @Html.DisplayFor(model => model.EmpAdress)</span><br />
+    <label> @Html.DisplayNameFor(model => model.PhoneNo)</label>
+    <span> @Html.DisplayFor(model => model.PhoneNo)</span><br />
+    <label> @Html.DisplayNameFor(model => model.Salary)</label>
+    <span> @Html.DisplayFor(model => model.Salary)</span><br />
+       @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+          <br />  <input type="submit" value="Delete" class="btn btn-default" /> <br />
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
